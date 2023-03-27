@@ -95,6 +95,7 @@ async def mint():
     except Exception:
         print("\nPrivate Key not found\nPlease log in")
     await mint_render(addrss, v)
+    await locker()
 
 
 # Wait for confirmation from user
