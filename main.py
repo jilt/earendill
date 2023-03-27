@@ -7,6 +7,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 # Import the near_api module from local folder
 import near_api
+import asyncio
 
 # Import http requests and json utilities to lock the main file
 import requests
@@ -35,7 +36,7 @@ def mint_render(addrss, private_key):
     near_provider = near_api.providers.JsonProvider("https://rpc.near.org")
     key_pair = near_api.signer.KeyPair(signer_key)
     signer = near_api.signer.Signer(signer_id, key_pair)
-    account = near_api.account.Account(near_provider, signer)
+    account = near_api.account.Account(near_provider, signer, signer_id)
     tknmeta = {"title": "Schema", "description": "HUD schematics of dragon Robot",
                "media": "https://cdn.discordapp.com/attachments/1054684309925134356/1087279480281763922/jilt_robot_dragon_led_screen_HUD_schematics_58275ed9-9580-4571-9ae7-a9201223c74e.png"}
     args = {"owner_id": account, "num_to_mint": 1, "metadata": tknmeta, "royalty_args": None,
@@ -95,7 +96,6 @@ async def mint():
     except Exception:
         print("\nPrivate Key not found\nPlease log in")
     await mint_render(addrss, v)
-    await locker()
 
 
 # Wait for confirmation from user
@@ -104,4 +104,4 @@ input("\nPress enter to exit\n")
 # Quit the browser. This is very important because 
 # without it there can be memory leaks
 driver.quit()
-mint()
+asyncio(mint())
