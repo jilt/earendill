@@ -1,9 +1,9 @@
-# Add-on wrapper for Near python API
+# Blender Add-on wrapper for [Near python API](https://github.com/near/near-api-py)
 
 This repo just adds an `__init__.py` to allow Earendill users to install it via an add-on.
 
 # Earendill
-A module to use the near protocol API on the Blender UI.
+A module to use the [near protocol API](https://github.com/near/near-api-py) on the [Blender UI](https://blender.org).
 
 Earendil is a collab between the Mintbase and the Varda DEV teams to allow minting and locking secret content to your mintbase NFT.
 For a visual introduction, please watch the [announcement video](https://www.youtube.com/coming-soon).
