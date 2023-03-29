@@ -48,27 +48,6 @@ def mint_render(addrss, private_key):
     account.function_call(contract_id, "nft_batch_mint", args)
     print("minted!")
 
-def locker():
-    # get owned NFTs after minting
-    signer_id = addrss
-    api_url = "https://api.varda.vision/owner/" + addrss
-    response = requests.get(api_url)
-    response.json()
-
-    # transform json into object and select only the most recent entry
-    x = json.loads(response, object_hook=lambda d: SimpleNamespace(**d))
-
-    token_id = x.token_id[0]
-
-    # upload new unlockable to API
-
-    unlockable = "url to online file"
-    headers = {"Content-Type": "application/json", "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibW9oIiwiaWF0IjoxNjc0NDk1OTgxLCJleHAiOjE2NzcwODc5ODF9.oFUCWWymeS_XPac4udgrAhC2ha-ud0KPjkDN8oIoXf8"}
-    lock_url = "https://api.varda.vision/new/" + token_id +"/ /" + unlockable
-    response = requests.post(lock_url, headers=headers)
-    print(response.status_code)
-
-
 # Get the near address from user
 addrss = input("Please enter the near address\n==> ")
 
