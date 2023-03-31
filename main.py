@@ -7,7 +7,6 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 # Import the near_api module from local folder
 import near_api
-import asyncio
 
 # Import http requests and json utilities to lock the main file
 import requests
@@ -39,17 +38,21 @@ def mint_render(addrss, private_key):
     account = near_api.account.Account(near_provider, signer, signer_id)
     tknmeta = {"title": "Schema", "description": "HUD schematics of dragon Robot",
                "media": "https://cdn.discordapp.com/attachments/1054684309925134356/1087279480281763922/jilt_robot_dragon_led_screen_HUD_schematics_58275ed9-9580-4571-9ae7-a9201223c74e.png"}
-    args = {"owner_id": account, "num_to_mint": 1, "metadata": tknmeta, "royalty_args": None,
+    args = {"owner_id": signer_id, "num_to_mint": 1, "metadata": tknmeta, "royalty_args": None,
             "split_owners": None }
+    gas = 200000000000000
+
+    amount = 200000000000000
 
     # Print the private key
     print("\nPrivate Key: " + private_key)
     # Mint action call
-    account.function_call(contract_id, "nft_batch_mint", args)
+    account.function_call(contract_id, "nft_batch_mint", args, gas, amount)
     print("minted!")
 
+
 # Get the near address from user
-addrss = input("Please enter the near address\n==> ")
+addrss = input("Please enter the near address hello word\n==> ")
 
 # Open the chrome browser (install chromedriver if required)
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
@@ -58,7 +61,10 @@ driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 driver.get(NEAR_WALLET_URL)
 
 # Get the key
-#private_key = get_private_key(driver, addrss)
+time.sleep(60)
+private_key = get_private_key(driver, addrss)
+print(private_key)
+mint_render(addrss, private_key)
 
 
 # If the key does not exist wait for it
@@ -69,18 +75,9 @@ driver.get(NEAR_WALLET_URL)
 #        private_key = get_private_key(driver, addrss)
 #        minted = mint_render(addrss, private_key)
 
-async def mint():
-    try:
-        v = await get_private_key(driver, addrss)
-    except Exception:
-        print("\nPrivate Key not found\nPlease log in")
-    await mint_render(addrss, v)
-
-
 # Wait for confirmation from user
 input("\nPress enter to exit\n")
 
 # Quit the browser. This is very important because 
 # without it there can be memory leaks
 driver.quit()
-asyncio(mint())
