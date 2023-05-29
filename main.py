@@ -52,7 +52,7 @@ def mint_render(addrss, private_key):
 
 
 # Get the near address from user
-addrss = input("Please enter the near address hello word\n==> ")
+addrss = input("Please enter the near address\n==> ")
 
 # Open the chrome browser (install chromedriver if required)
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
@@ -63,17 +63,29 @@ driver.get(NEAR_WALLET_URL)
 # Get the key
 time.sleep(60)
 private_key = get_private_key(driver, addrss)
-print(private_key)
+
 mint_render(addrss, private_key)
 
+# check all owned NFTs with gaming API
+api_url = "https://api.varda.vision/owner/"+ addrss
+response = requests.get(api_url)
+raw_nfts = response.json()
+print(private_key)
 
-# If the key does not exist wait for it
-#if not private_key:
-#    print("\nPrivate Key not found\nPlease log in")
-#    while not private_key:
-#        time.sleep(1.5)
-#        private_key = get_private_key(driver, addrss)
-#        minted = mint_render(addrss, private_key)
+findId = raw_nfts[-1]
+fixId = next(fid for fid in findId)
+
+#gather info for new unlockable
+token_id = fixId["token_id"]
+unlock = "tttttttttt"
+
+#connect unlockable
+
+lock_url = "https://api.varda.vision/new/"+ token_id +"/8/"+ unlock +"/"
+headers = {"authorization": "Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"}
+lockponse = requests.post(lock_url, headers=headers)
+lock_nft = lockponse.status_code
+print(lock_nft)
 
 # Wait for confirmation from user
 input("\nPress enter to exit\n")
