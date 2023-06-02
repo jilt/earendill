@@ -1,6 +1,7 @@
-# Blender Add-on to mint your render on [Mintbase](https://mintbase.xyz) and upload sources on the [Varda Vault](https://vault.varda.vision) for your collectors
+# What is this
 
-Please refeer to my introduction video to see how it works.
+Blender Add-on to mint your render on [Mintbase](https://mintbase.xyz) and upload sources on the [Varda Vault](https://vault.varda.vision) for your collectors
+Please check to my introduction video to see how it works.
 
 # Earendill
 This module leverages the [near protocol API](https://github.com/near/near-api-py) on the [Blender UI](https://blender.org).
