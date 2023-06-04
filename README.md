@@ -29,8 +29,8 @@ To finally install our Addon you just open the user prefernces: Edit menu -> Use
 
 You can use that panel to mint an NFT on your Mintbase store and attach unlockable secret content to it, please configure your store/smart contract on Mintbase before using our tool:
 
-_Setup the minters addresses allowance
-_pay GAS
+1) Setup the minters addresses allowance
+2) Pay GAS
 
 You need to add Title, Description and number of copies directly on this minting interface.
 
