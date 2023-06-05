@@ -20,17 +20,18 @@ The complete list is on the requirements.txt file on this repo, you can use it t
 
 Then import into blender as explained in the [GC figures how to](https://youtu.be/DSRha-8Zk8w).
 
-If you don't wanna install python on your PC (considering that Blender already has its own python version running internally) I provided a zipped version of the site-package folder with all the needed libraries, you can unzip that and place it on, I'm committed to keeping this repository updated for the next year.
+If you don't wanna install python on your PC (considering that Blender already has its own python version running internally) [here](https://drive.google.com/file/d/1-XbegCJa4DW3rfJ2l3-8YlczOgRMx85t/view?usp=drive_link) is a zipped version of the site-package folder with all the needed libraries, you can unzip that and place it on:
 
 `C:\Program Files\Blender Foundation\Blender 3.5\3.5\python\lib\site-packages`
 
-To run the near API script you need to [download it](https://github.com/near/near-api-py) and add the directory on the script\modules folder (I'm using windows here)
+I'm committed to keeping this repository updated for the next year.
+To run the near API script you need to [download it](https://github.com/near/near-api-py) and add the directory on the script\modules folder (windows path here)
 
 `C:\Users\user\AppData\Roaming\Blender Foundation\Blender\3.5\scripts\modules`
 
 If you're on OSX you can find the script folder on the Blender interface, Edit menu -> User preferences -> File Paths -> Scripts
 
-To finally install our Addon you just open the user prefernces: Edit menu -> User Preferences and click on the install (from file) button on the upper right, select the earendill.1.0.0.zip file you downloaded from this repo or from gumroad then you get a panel "Mintbase" on the 3D viewer when you push the N key.
+Finally, to install our Addon you just open the user prefernces: Edit menu -> User Preferences and click on the install (from file) button on the upper right, select the earendill.1.0.0.zip file you downloaded from this repo or from gumroad then you get a panel "Mintbase" on the 3D viewer when you push the N key.
 
 You can use that panel to mint an NFT on your Mintbase store and attach unlockable secret content to it, please configure your store/smart contract on Mintbase before using our tool:
 
@@ -43,7 +44,7 @@ We suggest to use https://nft.storage to store your files and add the urls of yo
 
 Once you enter the passphrase the addon gets the keypair and if your near address is a store minted and has enough near for the GAS it will mint your NFT on the mintbase store.
 
-You will need to go to the mintbase UI to list your NFT for sale and setup the royalties.
+You will need to go to the mintbase UI to list your NFT for sale and setup royalties.
 
 # Reach out
 For more information on the thought process behind Earendill, please open an issue on this repo.
