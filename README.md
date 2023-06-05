@@ -25,6 +25,7 @@ If you don't wanna install python on your PC (considering that Blender already h
 `C:\Program Files\Blender Foundation\Blender 3.5\3.5\python\lib\site-packages`
 
 I'm committed to keeping this repository updated for the next year.
+
 To run the near API script you need to [download it](https://github.com/near/near-api-py) and add the directory on the script\modules folder (windows path here)
 
 `C:\Users\user\AppData\Roaming\Blender Foundation\Blender\3.5\scripts\modules`
