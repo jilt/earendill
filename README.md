@@ -11,7 +11,7 @@ For a visual introduction, please watch the [announcement video](https://www.you
 You can either grab the file from here on GitHub, or alternatively on [Gumroad](https://jeeltcraft.gumroad.com/).
 
 # Get Started
-If you don't wanna see the video how to you can go on here.
+If you don't wanna see the [video how to](https://drive.google.com/file/d/1V16mFIFiAzmUCBNMxqhbQIw5otaX-5Cn/view?usp=drivesdk) you can go on here.
 
 To run the Near Python API on blender you will need to install a few external modules.
 The complete list is on the requirements.txt file on this repo, you can use it to install the packages with pip:
@@ -47,7 +47,11 @@ We suggest to use https://nft.storage to store your files and add the urls of yo
 
 Once you enter the passphrase the addon gets the keypair and if your near address is a store minter and has enough near for the GAS it will mint your NFT on the mintbase store.
 
-You will need to go to the mintbase UI to list your NFT for sale and setup royalties.
+You will need to go to the [mintbase UI](https://mintbase.xyz) to list your NFT for sale and setup royalties.
+
+Your collectors will need to go to the [Varda vault](https://vault.varda.vision) to get the source file or unlockable content you decided to attaxh to your NFT.
+
+Happy creation
 
 # Reach out
 For more information on the thought process behind Earendill, please open an issue on this repo.
