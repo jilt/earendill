@@ -13,8 +13,8 @@ You can either grab the file from here on GitHub, or alternatively on [Gumroad](
 # Get Started
 If you don't wanna see the video how to you can go on here.
 
-To install the Near Python API on blender you will need to install a few external modules.
-The complete list is on the requirements.txt file on this repo, you can use it to install the modules with pip:
+To run the Near Python API on blender you will need to install a few external modules.
+The complete list is on the requirements.txt file on this repo, you can use it to install the packages with pip:
 
 `$ pip install -r requirements.txt`
 
@@ -29,6 +29,8 @@ I'm committed to keeping the download package updated for the next year.
 To run the near API script you need to [download it](https://github.com/near/near-api-py) and add the directory on the script\modules folder (windows path here)
 
 `C:\Users\user\AppData\Roaming\Blender Foundation\Blender\3.5\scripts\modules`
+
+If you are running windows 10 you may need to run the selenium package (find it in the [site-packages link](https://drive.google.com/file/d/1-XbegCJa4DW3rfJ2l3-8YlczOgRMx85t/view?usp=drive_link) i shared above) from this module folder too.
 
 If you're on OSX you can find the script folder on the Blender interface, Edit menu -> User preferences -> File Paths -> Scripts
 
