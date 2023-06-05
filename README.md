@@ -32,18 +32,18 @@ To run the near API script you need to [download it](https://github.com/near/nea
 
 If you're on OSX you can find the script folder on the Blender interface, Edit menu -> User preferences -> File Paths -> Scripts
 
-Finally, to install our Addon you just open the user prefernces: Edit menu -> User Preferences and click on the install (from file) button on the upper right, select the earendill.1.0.0.zip file you downloaded from this repo or from gumroad then you get a panel "Mintbase" on the 3D viewer when you push the N key.
+Finally, to install our Addon you just open the user preferences: Edit menu -> User Preferences and click on the install (from file) button on the upper right, select the earendill.1.0.0.zip file you downloaded from this repo or from gumroad then you get a panel "Mintbase" on the 3D viewer when you push the N key.
 
 You can use that panel to mint an NFT on your Mintbase store and attach unlockable secret content to it, please configure your store/smart contract on Mintbase before using our tool:
 
 1) Setup the minters addresses allowance
 2) Pay GAS
 
-You need to add Title, Description and number of copies directly on this minting interface.
+You need to add Title, Description and number of copies directly on our minting interface.
 
 We suggest to use https://nft.storage to store your files and add the urls of your render file (render) and unlockable secret file (source) in the panel before clicking "Mint", once you do you'll be prompted to login to NEAR in a new Chrome window, this plugin only works on chrome and doesn't allow you to keep the keypair in you computer memory for security purposes, so each time you mint you will be prompted with a new passphrase request.
 
-Once you enter the passphrase the addon gets the keypair and if your near address is a store minted and has enough near for the GAS it will mint your NFT on the mintbase store.
+Once you enter the passphrase the addon gets the keypair and if your near address is a store minter and has enough near for the GAS it will mint your NFT on the mintbase store.
 
 You will need to go to the mintbase UI to list your NFT for sale and setup royalties.
 
