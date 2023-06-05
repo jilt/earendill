@@ -18,13 +18,13 @@ The complete list is on the requirements.txt file on this repo, you can use it t
 
 `$ pip install -r requirements.txt`
 
-Then import into blender as explained in the [GC figures how to](https://youtu.be/DSRha-8Zk8w).
-
 If you don't wanna install python on your PC (considering that Blender already has its own python version running internally) [here](https://drive.google.com/file/d/1-XbegCJa4DW3rfJ2l3-8YlczOgRMx85t/view?usp=drive_link) is a zipped version of the site-package folder with all the needed libraries, you can unzip that and place it on:
 
 `C:\Program Files\Blender Foundation\Blender 3.5\3.5\python\lib\site-packages`
 
-I'm committed to keeping this repository updated for the next year.
+Then import into blender as explained in the [GC figures how to](https://youtu.be/DSRha-8Zk8w).
+
+I'm committed to keeping the download package updated for the next year.
 
 To run the near API script you need to [download it](https://github.com/near/near-api-py) and add the directory on the script\modules folder (windows path here)
 
